@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,16 +56,6 @@
             8% { transform: translate(1px, -2px); }
             10% { transform: translate(0); }
             100% { transform: translate(0); }
-        }
-
-        @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 10px var(--accent-glow); }
-            50% { box-shadow: 0 0 25px var(--accent-glow); }
         }
 
         .fade-in {
@@ -202,42 +192,42 @@
             <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§01</span> Leadership & Vision</h2>
             <div class="card">
                 <div class="card-label">The Lexzyy Directive</div>
-                <p>Bu proje, <strong>Lexzyy</strong>'nin vizyonu ve önderliğinde, DDNet platformunda otonom navigasyonun sınırlarını zorlamak üzere hayata geçirilmiştir. Lexzyy'nin liderliği altında geliştirilen Sovereign Centaur, salt bir bottan öte, kendi kendini denetleyen ve geliştiren bir yapay zeka işletim sistemidir.</p>
+                <p>This project was conceptualized and initiated under the leadership of <strong>Lexzyy</strong>, with the objective of redefining autonomous navigation on the DDNet platform. Under Lexzyy's directive, Sovereign Centaur has evolved from a simple bot into a self-auditing, adaptive AI Operating System.</p>
                 <div style="border-left: 3px solid var(--amber); padding-left: 20px; margin-top: 30px; font-style: italic;">
-                    "Lexzyy liderliğindeki bu sistemde, deterministik fizik gerçeği (Oracle) ile öğrenen yapay zeka zihninin (Brain) kusursuz füzyonu hedeflenmiştir."
+                    "In this Lexzyy-led architecture, we achieve a absolute fusion between deterministic physical reality (Oracle) and the learning neural mind (Brain)."
                 </div>
             </div>
         </section>
 
-        <!-- CHAPTER 1: INTRO (FROM 1300-LINE GUIDE) -->
+        <!-- CHAPTER 1: INTRO -->
         <section id="intro" class="fade-in">
-            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§02</span> Bölüm 1: Projenin Temelleri</h2>
+            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§02</span> Chapter 1: Project Foundations</h2>
             <div class="card">
-                <h3>1.1 Proje Nedir ve Ne Hedefliyoruz?</h3>
-                <p>Sovereign Centaur, DDraceNetwork (DDNet) adlı platform oyunu için geliştirilmekte olan, insan üstü performansa sahip otonom bir navigasyon botudur. DDNet, 50Hz tick-rate ile çalışan hassas bir oyundur. Oyunun temel mekaniği hook (kanca) sistemi etrafında şekillenir. AiP-Gores gibi ileri seviye haritalarda bu mekaniğin milisaniye hassasiyetiyle kullanılması gerekmektedir.</p>
+                <h3>1.1 What is the Project and What are the Goals?</h3>
+                <p>Sovereign Centaur is a superhuman autonomous navigation bot developed for DDraceNetwork. DDNet is a precision platformer operating at a 50Hz tick-rate. The core mechanics revolve around the hook system, demanding millisecond precision in maps like AiP-Gores.</p>
                 
-                <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+                <div class="card-grid">
                     <div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; border: 1px solid var(--border);">
                         <span class="highlight">Tier 1: Map Completion</span>
-                        <p style="font-size: 14px; margin-top: 10px;">Haritayı freeze ve death tile'lara girmeden bitirme kabiliyeti.</p>
+                        <p style="font-size: 14px; margin-top: 10px;">The ability to traverse maps without freezes or deaths.</p>
                     </div>
                     <div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; border: 1px solid var(--border);">
                         <span class="highlight">Tier 2: TAS-Quality</span>
-                        <p style="font-size: 14px; margin-top: 10px;">Minimum sürede, kusursuz hook swing mekanikleriyle rekor denemeleri.</p>
+                        <p style="font-size: 14px; margin-top: 10px;">Flawless hook swing mechanics for speedrun-level performance.</p>
                     </div>
                 </div>
             </div>
 
             <div id="layers" class="card" style="margin-top: 40px;">
-                <h3>1.2 Oracle ve Brain Katmanları</h3>
-                <p>Mimarinin en kritik kararı, sistemin C++ Oracle ve Python Brain adlı iki bağımsız katmana ayrılmasıdır. <strong>Lexzyy</strong> tarafından onaylanan bu ayrım, performans zorunluluğundan doğmuştur.</p>
-                <p><strong>C++ Oracle:</strong> Oyunun fizik motoruna (`CCharacterCore`) doğrudan erişir. A* algoritmasıyla yol planlaması yapar. Risk-Jacobian Sonar ile tehlikeleri tespit eder.</p>
-                <p><strong>Python Brain:</strong> LPSD (Latent Phase-Space Diffusion) modelini çalıştırır. Shared Memory'den gelen 11 boyutlu state vektörünü işler. Trajektör öngörüsü üretir.</p>
+                <h3>1.2 Oracle and Brain Layers</h3>
+                <p>The most critical architectural decision, approved by <strong>Lexzyy</strong>, is the separation of the system into C++ Oracle and Python Brain layers.</p>
+                <p><strong>C++ Oracle:</strong> Direct access to the game's physics engine (`CCharacterCore`). Handles A* pathfinding and Risk-Jacobian sonar diagnostics.</p>
+                <p><strong>Python Brain:</strong> Operates the LPSD (Latent Phase-Space Diffusion) model. Processes the 11-dimensional state manifold received via Shared Memory.</p>
             </div>
             
             <div id="shm" class="card" style="margin-top: 40px;">
-                <h3>1.3 Nekomata // Shared Memory Neden Seçildi?</h3>
-                <p>Shared memory user space'te kalır, kernel geçişi yoktur ve gecikme nanosaniye mertebesindedir. Bu bütçeli 20ms'lik döngüde hayati önem taşıyan bir "wait-free" garantisi sağlar.</p>
+                <h3>1.3 Nekomata // Why Shared Memory?</h3>
+                <p>Shared memory remains in user space, eliminating kernel context switches and reducing latency to nanoseconds. This provides a vital "wait-free" guarantee within the 20ms physics tick.</p>
                 <pre>
 <span class="token-cmt">// C++ struct DiffusionBrain (v0x7500B1)</span>
 <span class="token-kw">struct</span> <span class="token-fn">DiffusionBrain</span> {
@@ -253,14 +243,14 @@
 
         <!-- CHAPTER 2: SETUP -->
         <section id="setup" class="fade-in">
-            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§03</span> Bölüm 2: Geliştirme Ortamı</h2>
+            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§03</span> Chapter 2: Development Environment</h2>
             <div class="card">
-                <h3>2.1 Gerekli Araçlar ve Bağımlılıklar</h3>
-                <p>Lexzyy Direktifi uyarınca ortamın MinGW-w64 ve MSYS2 tabanlı olması gerekmektedir. PATH çakışmaları projenin en sık karşılaşılan sorunlarından biridir.</p>
+                <h3>2.1 Required Tools and Dependencies</h3>
+                <p>Per the Lexzyy Directive, the environment must utilize MinGW-w64 and MSYS2. Avoiding PATH conflicts is paramount.</p>
                 <ul>
-                    <li><strong>MSYS2 UCRT64:</strong> Temel toolchain.</li>
-                    <li><strong>Ninja Build:</strong> Hızlı derleme için zorunlu.</li>
-                    <li><strong>Python 3.12:</strong> PyTorch 2.0+ desteği ile Brain çekirdeği.</li>
+                    <li><strong>MSYS2 UCRT64:</strong> Primary toolchain.</li>
+                    <li><strong>Ninja Build:</strong> Mandatory for ultra-fast compilation.</li>
+                    <li><strong>Python 3.12:</strong> PyTorch 2.0+ optimized for the Neuro-Core.</li>
                 </ul>
                 <pre>
 pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-cmake
@@ -270,53 +260,59 @@ pacman -S mingw-w64-x86_64-ninja mingw-w64-x86_64-python3</pre>
 
         <!-- CHAPTER 3-4: C++ & PYTHON -->
         <section id="cpp" class="fade-in">
-            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§04</span> Bölüm 3-4: Teknik Detaylar</h2>
+            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§04</span> Chapter 3-4: Technical Engineering</h2>
             <div class="card">
-                <h3>3.3 Ghost Tick Simülasyonu</h3>
-                <p>Phantom Tether mekanizmasının basit lineer projeksiyon yerine oyunun kendi fizik motorunu kullanması, sistemi diğer yaklaşımlardan temelden ayırt eden Lexzyy imzalı bir özelliktir.</p>
+                <h3>3.3 Ghost Tick Simulation</h3>
+                <p>The Phantom Tether mechanism uses the game's actual physics engine for projection, distinguish it from simpler linear estimators—a signature Lexzyy-validated feature.</p>
                 
-                <h3>4.3 LPSD Modeli: 1-Step Consistency</h3>
-                <p>LPSD modeli, standart DDPM yerine consistency model kullandığı için tek adımda (1-step) denoising yapabilmektedir. Bu, 50Hz döngüde çalışabilmek için zorunludur.</p>
+                <h3>4.3 LPSD Model: 1-Step Consistency</h3>
+                <p>The neuro-core utilizes a consistency model derived from DDPM, enabling single-step denoising. This is critical for maintaining the high-frequency 50Hz control loop.</p>
             </div>
         </section>
 
-        <!-- CHAPTER 5: RALPH LOOP -->
+        <!-- CHAPTER 5-7: MAINTENANCE -->
         <section id="ralph" class="fade-in">
-            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§05</span> Bölüm 5: Ralph Loop</h2>
+            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§05</span> Chapter 5-7: Autonomous Maintenance</h2>
             <div class="card">
-                <p>Ralph Loop mimarisi, AI geliştirici ajanların (Antigravity/unveiled) oturumlar arası hafıza kaybını önler. Tüm proje hafızası <code>.orchestrator/</code> klasöründe tutulur.</p>
+                <h3>5.1 Ralph Loop Protocol</h3>
+                <p>The Ralph Loop architecture prevents memory loss across AI developer sessions. All project state is persisted within the <code>.orchestrator/</code> manifold.</p>
                 <div class="card-grid">
                     <div style="padding: 20px; border: 1px solid var(--border); border-radius: 12px;">
                         <span class="highlight">RULES.md</span>
-                        <p style="font-size: 13px; margin-top: 10px;">Ajanın asla çiğneyemeyeceği anayasal kurallar.</p>
+                        <p style="font-size: 13px; margin-top: 10px;">Immutable constitutional rules for agent behavior.</p>
                     </div>
                     <div style="padding: 20px; border: 1px solid var(--border); border-radius: 12px;">
                         <span class="highlight">STATE.json</span>
-                        <p style="font-size: 13px; margin-top: 10px;">Sistemin anlık fazı ve teknik parametreleri.</p>
+                        <p style="font-size: 13px; margin-top: 10px;">Real-time system phase and SHM parameters.</p>
                     </div>
                 </div>
+            </div>
+            
+            <div id="guardian" class="card" style="margin-top: 40px;">
+                <h3>6.1 Guardian Handlers</h3>
+                <p>Guardian tools like <code>memory_alignment_checker.py</code> and <code>sovereign_telemetry.py</code> ensure data integrity and 50Hz session visibility.</p>
             </div>
         </section>
 
         <!-- CHAPTER 8: DIAGNOSTICS -->
         <section id="debug" class="fade-in">
-            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§06</span> Bölüm 8: Sorun Tespiti</h2>
+            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§06</span> Chapter 8: Diagnostic Manual</h2>
             <div class="card">
-                <h3>8.1 Map Başında Boş Hook Atma</h3>
-                <p>Bu sorun genellikle trajektör tahmininin sıfırlanmasından kaynaklanır. <strong>Lexzyy</strong> tarafından geliştirilen "Warm-start Prior" çözümü ile başlangıç anında hafif bir yön bias'ı eklenerek aşılmaktadır.</p>
+                <h3>8.1 Map-Start Idle Hook Failure</h3>
+                <p>Typically caused by trajectory zero-initialization. Resolved via the "Warm-start Prior" strategy, injecting a directional bias into the manifold at map initiation.</p>
                 
                 <h3>8.2 Manifold Sync Collapse</h3>
-                <p>Padding ve atomicity hataları bu duruma yol açar. Her struct değişikliğinde <code>memory_alignment_checker.py</code> çalıştırılmalıdır.</p>
+                <p>Symptoms include zeroed state readings in Python. Root causes: compiler padding or seqlock fence misplacement. Validation via Alignment Checker is mandatory.</p>
             </div>
         </section>
 
         <!-- CHAPTER 9: ROADMAP -->
         <section id="roadmap" class="fade-in">
-            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§07</span> Proje Yol Haritası</h2>
+            <h2><span style="color: var(--accent); font-family: var(--mono); font-size: 20px;">§07</span> Project Roadmap</h2>
             <div class="tbl-wrap">
                 <table>
                     <thead>
-                        <tr><th>Aşama</th><th>Hedef</th><th>Durum</th></tr>
+                        <tr><th>Phase</th><th>Objective</th><th>Status</th></tr>
                     </thead>
                     <tbody>
                         <tr><td>Phase 68</td><td>Seqlock & Telemetry Baseline</td><td><span class="status st-done">COMPLETED</span></td></tr>
